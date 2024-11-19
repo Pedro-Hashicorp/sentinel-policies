@@ -8,5 +8,5 @@ module "tfrun-functions" {
 
 policy "restrict-aws-instance-type"{
    source = "./cloud-agnostic/limit-proposed-monthly-cost.sentinel"
-   enforcement_level = "advisory"
+   enforcement_level = "soft-mandatory"
 }
