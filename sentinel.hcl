@@ -1,7 +1,8 @@
+module "tfplan-functions" {
+  source = "./common-functions/tfplan-functions/tfplan-functions.sentinel"
+}
 
-# Copyright (c) HashiCorp, Inc.
-# SPDX-License-Identifier: MPL-2.0
-
-policy "less-than-100-month" {
-  enforcement_level = "soft-mandatory"
+policy "restrict-aws-instance-type"{
+   source = "./cloud-agnostic/limit-proposed-monthly-cost.sentinel"
+   enforcement_level = "advisory"
 }
