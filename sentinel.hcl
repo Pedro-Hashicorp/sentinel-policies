@@ -10,3 +10,8 @@ policy "restrict-aws-instance-type"{
    source = "./cloud-agnostic/limit-proposed-monthly-cost.sentinel"
    enforcement_level = "soft-mandatory"
 }
+
+policy "enforce-mandatory-tags"{
+    source = "./cloud-agnostic/enforce-mandatory-tags.sentinel"
+    enforcement_level = "hard-mandatory"
+}
