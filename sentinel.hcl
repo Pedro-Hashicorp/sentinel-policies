@@ -8,6 +8,9 @@ module "tfrun-functions" {
 module "aws-functions" {
   source = "./aws/aws-functions/aws-functions.sentinel"
 }
+module "tfconfig-functions" {
+  source = "./common-functions/tfconfig-functions/tfconfig-functions.sentinel"
+}
 
 policy "restrict-aws-instance-type"{
    source = "./cloud-agnostic/limit-proposed-monthly-cost.sentinel"
