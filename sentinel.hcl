@@ -12,7 +12,7 @@ module "tfconfig-functions" {
   source = "./common-functions/tfconfig-functions/tfconfig-functions.sentinel"
 }
 
-policy "restrict-aws-instance-type"{
+policy "limit-costs"{
    source = "./cloud-agnostic/limit-proposed-monthly-cost.sentinel"
    enforcement_level = "soft-mandatory"
 }
