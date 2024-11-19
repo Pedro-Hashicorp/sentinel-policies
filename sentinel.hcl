@@ -12,6 +12,6 @@ policy "restrict-aws-instance-type"{
 }
 
 policy "enforce-mandatory-tags"{
-    source = "./cloud-agnostic/enforce-mandatory-tags.sentinel"
+    source = "./aws/enforce-mandatory-tags.sentinel"
     enforcement_level = "hard-mandatory"
 }
