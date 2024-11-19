@@ -5,6 +5,9 @@ module "tfplan-functions" {
 module "tfrun-functions" {
   source = "./common-functions/tfrun-functions/tfrun-functions.sentinel"
 }
+module "aws-functions" {
+  source = "./aws/aws-functions/aws-functions.sentinel"
+}
 
 policy "restrict-aws-instance-type"{
    source = "./cloud-agnostic/limit-proposed-monthly-cost.sentinel"
